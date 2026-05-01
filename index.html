@@ -14,77 +14,22 @@
             line-height: 1.6;
         }
 
-        /* Announcement Bar */
-        .announcement-bar {
-            background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
-            color: white;
-            text-align: center;
-            padding: 12px 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .announcement-bar span {
-            color: #fbbf24;
-            font-weight: 700;
-        }
-
-        /* Free Shipping Bar */
-        .shipping-bar {
-            background: #fff;
-            padding: 15px 20px;
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-        .shipping-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .shipping-text {
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 12px;
-            font-size: 1rem;
-        }
-        .shipping-text span {
-            color: #dc2626;
-            font-weight: 800;
-        }
-
-        .progress-track {
-            max-width: 500px;
-            margin: 0 auto;
-            height: 8px;
-            background: #e5e5e5;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(90deg, #2563eb, #3b82f6);
-            border-radius: 4px;
-            transition: width 0.5s ease;
-        }
-
-        /* Header */
+        /* Header - Simple & Clean */
         header {
             background: white;
             position: sticky;
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 20px 0;
         }
 
         .header-wrapper {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
         }
 
@@ -96,26 +41,30 @@
         }
 
         .brand-logo {
-            width: 45px;            height: 45px;
+            width: 45px;
+            height: 45px;
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
+            justify-content: center;            font-size: 1.5rem;
         }
 
         .brand-name {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 800;
             color: #1a1a1a;
             letter-spacing: -0.5px;
         }
 
         .header-actions {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         .cart-wrapper {
@@ -145,9 +94,9 @@
 
         .menu-toggle {
             background: #1a1a1a;
-            color: white;            border: none;
-            padding: 10px 18px;
-            border-radius: 8px;
+            color: white;
+            border: none;
+            padding: 10px 18px;            border-radius: 8px;
             cursor: pointer;
             font-size: 1.2rem;
             transition: transform 0.2s;
@@ -157,54 +106,95 @@
             transform: scale(1.05);
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
-            padding: 100px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+        /* Mobile Navigation Menu */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
         }
 
-        .hero::before {
-            content: '';
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav-content {
             position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
+            top: 0;
+            right: 0;
+            width: 280px;
+            height: 100%;
+            background: white;
+            padding: 30px;
+            box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+        }
+
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e5e5e5;
+        }
+
+        .mobile-nav-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .close-menu {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #1a1a1a;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-nav-links a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            transition: color 0.3s;
+        }
+
+        .mobile-nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* Hero Section - Clean Background */
+        .hero {
+            background: #f8fafc;
+            padding: 80px 20px;
+            text-align: center;
         }
 
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
-            position: relative;
-            z-index: 1;
         }
 
-        .hero-badge {
-            display: inline-block;
-            background: #2563eb;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            margin-bottom: 25px;
-        }
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 800;
             color: #1a1a1a;
             margin-bottom: 20px;
-            line-height: 1.1;
-            letter-spacing: -1px;
+            line-height: 1.2;
         }
 
-        .hero-subtitle {
-            font-size: 1.5rem;
+        .hero-subtitle {            font-size: 1.5rem;
             color: #3b82f6;
             margin-bottom: 25px;
             font-weight: 600;
@@ -243,7 +233,8 @@
         }
 
         .section-header {
-            text-align: center;            margin-bottom: 60px;
+            text-align: center;
+            margin-bottom: 60px;
         }
 
         .section-title {
@@ -251,9 +242,7 @@
             font-weight: 800;
             color: #1a1a1a;
             margin-bottom: 15px;
-            letter-spacing: -0.5px;
         }
-
         .section-subtitle {
             color: #6b7280;
             font-size: 1.1rem;
@@ -292,7 +281,8 @@
             transition: transform 0.5s;
         }
 
-        .category-card:hover .category-image {            transform: scale(1.1);
+        .category-card:hover .category-image {
+            transform: scale(1.1);
         }
 
         .category-overlay {
@@ -302,8 +292,7 @@
             right: 0;
             background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
             padding: 30px;
-            color: white;
-        }
+            color: white;        }
 
         .category-content {
             padding: 25px;
@@ -341,7 +330,8 @@
         /* Features Section */
         .features {
             background: white;
-            padding: 80px 20px;            margin-top: 60px;
+            padding: 80px 20px;
+            margin-top: 60px;
         }
 
         .features-grid {
@@ -351,7 +341,6 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
         }
-
         .feature-item {
             text-align: center;
             padding: 30px;
@@ -378,8 +367,7 @@
         footer {
             background: #1a1a1a;
             color: white;
-            text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px 30px;
             margin-top: 80px;
         }
 
@@ -388,71 +376,83 @@
             margin: 0 auto;
         }
 
-        .footer-logo {
-            font-size: 2rem;
-            font-weight: 800;            margin-bottom: 20px;
+        .footer-top {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #374151;
         }
+
+        .footer-logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;        }
 
         .footer-text {
             color: #9ca3af;
-            margin-bottom: 30px;
+            font-size: 1.1rem;
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
-        .footer-links a {
+        .footer-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
             color: #9ca3af;
             text-decoration: none;
             transition: color 0.3s;
+            font-size: 0.95rem;
         }
 
-        .footer-links a:hover {
+        .footer-section a:hover {
             color: white;
         }
 
         .footer-bottom {
-            border-top: 1px solid #374151;
+            text-align: center;
             padding-top: 30px;
+            border-top: 1px solid #374151;
             color: #6b7280;
             font-size: 0.9rem;
         }
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
+            .header-wrapper { justify-content: center; }            .brand-name { font-size: 1.6rem; }
             .hero h1 { font-size: 2.2rem; }
             .hero-subtitle { font-size: 1.2rem; }
             .section-title { font-size: 2rem; }
             .categories-grid { grid-template-columns: 1fr; }
-            .brand-name { font-size: 1.4rem; }
             .category-image-wrapper { height: 220px; }
+            .mobile-nav-content { width: 100%; }
+            .header-actions { position: fixed; right: 20px; top: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-        ✨ Welcome to <span>NewTrendhive</span> – Your Health & Wellness Destination!
-    </div>
-    <!-- Shipping Bar -->
-    <div class="shipping-bar">
-        <div class="shipping-container">
-            <div class="shipping-text">
-                🚚 FREE SHIPPING on orders over <span>$50</span>
-            </div>
-            <div class="progress-track">
-                <div class="progress-fill"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header -->
+    <!-- Header - Clean & Simple -->
     <header>
         <div class="header-wrapper">
             <a href="https://newtrendhive.com/" class="brand">
@@ -464,15 +464,31 @@
                     <div class="cart-icon">🛒</div>
                     <span class="cart-badge">0</span>
                 </div>
-                <button class="menu-toggle">☰</button>
+                <button class="menu-toggle" onclick="openMenu()">☰</button>
             </div>
         </div>
     </header>
 
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav" onclick="closeMenu(event)">
+        <div class="mobile-nav-content" onclick="event.stopPropagation()">
+            <div class="mobile-nav-header">
+                <div class="mobile-nav-title">Menu</div>
+                <button class="close-menu" onclick="closeMenu(event)">×</button>
+            </div>
+            <div class="mobile-nav-links">
+                <a href="https://newtrendhive.com/" onclick="closeMenu()">🏠 Home</a>
+                <a href="https://newtrendhive.com/collections/health-beauty" onclick="closeMenu()">💆 Health & Beauty</a>
+                <a href="https://newtrendhive.com/collections/sports-outdoors" onclick="closeMenu()">🏃 Sports & Outdoors</a>
+                <a href="https://newtrendhive.com/collections/electronics" onclick="closeMenu()">📱 Electronics</a>
+                <a href="https://newtrendhive.com/pages/about-us" onclick="closeMenu()">ℹ️ About Us</a>
+                <a href="https://newtrendhive.com/pages/contact-us" onclick="closeMenu()">📧 Contact</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">🔥 New Arrivals Available Now</div>
+    <section class="hero">        <div class="hero-content">
             <h1>Elevate Your Lifestyle</h1>
             <p class="hero-subtitle">Premium Health & Wellness Products</p>
             <p class="hero-description">
@@ -488,7 +504,8 @@
             <h2 class="section-title">Shop by Category</h2>
             <p class="section-subtitle">Find exactly what you're looking for</p>
         </div>
-                <div class="categories-grid">
+        
+        <div class="categories-grid">
             <!-- Health & Beauty -->
             <div class="category-card" onclick="window.location.href='https://newtrendhive.com/collections/health-beauty'">
                 <div class="category-image-wrapper">
@@ -520,8 +537,7 @@
             </div>
 
             <!-- Electronics -->
-            <div class="category-card" onclick="window.location.href='https://newtrendhive.com/collections/electronics'">
-                <div class="category-image-wrapper">
+            <div class="category-card" onclick="window.location.href='https://newtrendhive.com/collections/electronics'">                <div class="category-image-wrapper">
                     <img src="https://images.unsplash.com/photo-1498049794561-778c5c012619?w=600&h=400&fit=crop" alt="Electronics" class="category-image">
                     <div class="category-overlay">
                         <h3 style="font-size: 1.5rem; font-weight: 700;">ELECTRONICS</h3>
@@ -537,7 +553,8 @@
     </section>
 
     <!-- Features Section -->
-    <section class="features">        <div class="features-grid">
+    <section class="features">
+        <div class="features-grid">
             <div class="feature-item">
                 <div class="feature-icon">🚚</div>
                 <h3 class="feature-title">Free Shipping</h3>
@@ -564,19 +581,61 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">NewTrendhive</div>
-            <p class="footer-text">Your trusted destination for health, wellness, and tech products.</p>
-            <div class="footer-links">
-                <a href="https://newtrendhive.com/">Shop Now</a>
-                <a href="https://newtrendhive.com/pages/about-us">About Us</a>
-                <a href="https://newtrendhive.com/pages/contact-us">Contact</a>
-                <a href="https://newtrendhive.com/policies/privacy-policy">Privacy</a>
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <span style="font-size: 2.5rem;">🌟</span>
+                    NewTrendhive
+                </div>
+                <p class="footer-text">Your trusted destination for health, wellness, and tech products.</p>            </div>
+            
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="https://newtrendhive.com/">All Products</a></li>
+                        <li><a href="https://newtrendhive.com/collections/health-beauty">Health & Beauty</a></li>
+                        <li><a href="https://newtrendhive.com/collections/sports-outdoors">Sports & Outdoors</a></li>
+                        <li><a href="https://newtrendhive.com/collections/electronics">Electronics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="https://newtrendhive.com/pages/about-us">About Us</a></li>
+                        <li><a href="https://newtrendhive.com/pages/contact-us">Contact Us</a></li>
+                        <li><a href="https://newtrendhive.com/pages/shipping-policy">Shipping Info</a></li>
+                        <li><a href="https://newtrendhive.com/pages/return-policy">Returns</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="https://newtrendhive.com/pages/faq">FAQ</a></li>
+                        <li><a href="https://newtrendhive.com/pages/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="https://newtrendhive.com/pages/terms-of-service">Terms of Service</a></li>
+                    </ul>
+                </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>© 2026 NewTrendhive. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile Menu Functions
+        function openMenu() {
+            document.getElementById('mobileNav').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu(event) {
+            document.getElementById('mobileNav').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }    </script>
 
 </body>
 </html>

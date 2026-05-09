@@ -14,7 +14,7 @@
             line-height: 1.6;
         }
 
-        /* Header - Clean & Simple */
+        /* Header */
         header {
             background: white;
             position: sticky;
@@ -276,11 +276,15 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
 
+        /* Updated Image Wrapper */
         .category-image-wrapper {
             position: relative;
             overflow: hidden;
             height: 280px;
-            background: #f0f0f0;
+            background-color: #f3f4f6; /* لون خلفية رمادي أنيق في حالة عدم ظهور الصورة */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .category-image {
@@ -289,10 +293,10 @@
             object-fit: cover;
             transition: transform 0.5s;
         }
-
         .category-card:hover .category-image {
             transform: scale(1.1);
         }
+
         .category-overlay {
             position: absolute;
             bottom: 0;
@@ -337,11 +341,11 @@
         }
 
         /* Features Section */
-        .features {
-            background: white;
+        .features {            background: white;
             padding: 80px 20px;
             margin-top: 60px;
         }
+
         .features-grid {
             max-width: 1200px;
             margin: 0 auto;
@@ -386,11 +390,11 @@
         }
 
         .footer-top {
-            text-align: center;
-            margin-bottom: 40px;
+            text-align: center;            margin-bottom: 40px;
             padding-bottom: 40px;
             border-bottom: 1px solid #374151;
         }
+
         .footer-logo {
             display: flex;
             align-items: center;
@@ -436,10 +440,10 @@
             gap: 40px;
             margin-bottom: 40px;
         }
-
         .footer-section h3 {
             font-size: 1.2rem;
-            margin-bottom: 20px;            color: white;
+            margin-bottom: 20px;
+            color: white;
         }
 
         .footer-section ul {
@@ -484,11 +488,11 @@
             .footer-new { font-size: 2rem; }
             .footer-trendhive { font-size: 1.2rem; }
         }
-    </style>
-</head>
+    </style></head>
 <body>
 
-    <!-- Header -->    <header>
+    <!-- Header -->
+    <header>
         <div class="header-wrapper">
             <a href="https://newtrendhive.com/" class="brand">
                 <!-- SVG Logo -->
@@ -533,11 +537,11 @@
                 <a href="https://newtrendhive.com/collections/electronics" onclick="closeMenu()">📱 Electronics</a>
                 <a href="https://newtrendhive.com/pages/about-us" onclick="closeMenu()">ℹ️ About Us</a>
                 <a href="https://newtrendhive.com/pages/contact-us" onclick="closeMenu()">📧 Contact</a>
-            </div>
-        </div>
+            </div>        </div>
     </div>
 
-    <!-- Hero Section -->    <section class="hero">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="hero-content">
             <h1>Elevate Your Lifestyle</h1>
             <p class="hero-subtitle">Premium Health & Wellness Products</p>
@@ -559,7 +563,8 @@
             <!-- Health & Beauty -->
             <div class="category-card" onclick="window.location.href='https://newtrendhive.com/collections/health-beauty'">
                 <div class="category-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1570172619644-dfd102871d7c?w=800&h=600&fit=crop" alt="Health & Beauty" class="category-image">
+                    <!-- صورة جديدة ومضمونة لمنتجات العناية -->
+                    <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80" alt="Health & Beauty" class="category-image">
                     <div class="category-overlay">
                         <h3 style="font-size: 1.5rem; font-weight: 700;">HEALTH & BEAUTY</h3>
                     </div>
@@ -581,14 +586,15 @@
                 </div>
                 <div class="category-content">
                     <h3 class="category-title">Sports & Outdoors</h3>
-                    <p class="category-description">Home workout equipment, outdoor gear, and fitness accessories for active living.</p>
-                    <a href="https://newtrendhive.com/collections/sports-outdoors" class="explore-link">Explore Collection →</a>
+                    <p class="category-description">Home workout equipment, outdoor gear, and fitness accessories for active living.</p>                    <a href="https://newtrendhive.com/collections/sports-outdoors" class="explore-link">Explore Collection →</a>
                 </div>
             </div>
 
-            <!-- Electronics -->            <div class="category-card" onclick="window.location.href='https://newtrendhive.com/collections/electronics'">
+            <!-- Electronics -->
+            <div class="category-card" onclick="window.location.href='https://newtrendhive.com/collections/electronics'">
                 <div class="category-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1498049794561-778c5c012619?w=800&h=600&fit=crop" alt="Electronics" class="category-image">
+                    <!-- صورة جديدة ومضمونة للإلكترونيات -->
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80" alt="Electronics" class="category-image">
                     <div class="category-overlay">
                         <h3 style="font-size: 1.5rem; font-weight: 700;">ELECTRONICS</h3>
                     </div>
@@ -621,7 +627,7 @@
                 <p class="feature-text">Premium products only</p>
             </div>
             <div class="feature-item">
-                <div class="feature-icon"></div>
+                <div class="feature-icon">💬</div>
                 <h3 class="feature-title">24/7 Support</h3>
                 <p class="feature-text">Always here to help</p>
             </div>
@@ -629,13 +635,13 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
+    <footer>        <div class="footer-content">
             <div class="footer-top">
                 <div class="footer-logo">
                     <!-- SVG Logo -->
                     <svg class="footer-logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <defs>                            <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <defs>
+                            <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
                                 <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
                                 <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
@@ -678,13 +684,13 @@
                     <h3>Support</h3>
                     <ul>
                         <li><a href="https://newtrendhive.com/pages/faq">FAQ</a></li>
-                        <li><a href="https://newtrendhive.com/pages/privacy-policy">Privacy Policy</a></li>
-                        <li><a href="https://newtrendhive.com/pages/terms-of-service">Terms of Service</a></li>
+                        <li><a href="https://newtrendhive.com/pages/privacy-policy">Privacy Policy</a></li>                        <li><a href="https://newtrendhive.com/pages/terms-of-service">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
             
-            <div class="footer-bottom">                <p>© 2026 NewTrendhive. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p>© 2026 NewTrendhive. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -14,7 +14,7 @@
             line-height: 1.6;
         }
 
-        /* Header - Simple & Clean */
+        /* Header - Clean & Simple */
         header {
             background: white;
             position: sticky;
@@ -43,18 +43,26 @@
         .brand-logo {
             width: 45px;
             height: 45px;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;            font-size: 1.5rem;
         }
 
-        .brand-name {
+        .brand-text {
+            display: flex;
+            flex-direction: column;            line-height: 1;
+        }
+
+        .brand-new {
             font-size: 2rem;
-            font-weight: 800;
+            font-weight: 900;
+            color: #1a1a1a;
+            letter-spacing: -1px;
+        }
+
+        .brand-trendhive {
+            font-size: 1.3rem;
+            font-weight: 500;
             color: #1a1a1a;
             letter-spacing: -0.5px;
+            margin-top: -5px;
         }
 
         .header-actions {
@@ -88,15 +96,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.75rem;
-            font-weight: 700;
+            font-size: 0.75rem;            font-weight: 700;
         }
 
         .menu-toggle {
             background: #1a1a1a;
             color: white;
             border: none;
-            padding: 10px 18px;            border-radius: 8px;
+            padding: 10px 18px;
+            border-radius: 8px;
             cursor: pointer;
             font-size: 1.2rem;
             transition: transform 0.2s;
@@ -137,8 +145,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
+            margin-bottom: 30px;            padding-bottom: 20px;
             border-bottom: 2px solid #e5e5e5;
         }
 
@@ -146,6 +153,7 @@
             font-size: 1.5rem;
             font-weight: 700;
         }
+
         .close-menu {
             background: none;
             border: none;
@@ -174,7 +182,7 @@
             color: #2563eb;
         }
 
-        /* Hero Section - Clean Background */
+        /* Hero Section */
         .hero {
             background: #f8fafc;
             padding: 80px 20px;
@@ -186,15 +194,15 @@
             margin: 0 auto;
         }
 
-        .hero h1 {
-            font-size: 3rem;
+        .hero h1 {            font-size: 3rem;
             font-weight: 800;
             color: #1a1a1a;
             margin-bottom: 20px;
             line-height: 1.2;
         }
 
-        .hero-subtitle {            font-size: 1.5rem;
+        .hero-subtitle {
+            font-size: 1.5rem;
             color: #3b82f6;
             margin-bottom: 25px;
             font-weight: 600;
@@ -236,13 +244,13 @@
             text-align: center;
             margin-bottom: 60px;
         }
-
         .section-title {
             font-size: 2.5rem;
             font-weight: 800;
             color: #1a1a1a;
             margin-bottom: 15px;
         }
+
         .section-subtitle {
             color: #6b7280;
             font-size: 1.1rem;
@@ -272,6 +280,7 @@
             position: relative;
             overflow: hidden;
             height: 280px;
+            background: #f0f0f0;
         }
 
         .category-image {
@@ -284,7 +293,6 @@
         .category-card:hover .category-image {
             transform: scale(1.1);
         }
-
         .category-overlay {
             position: absolute;
             bottom: 0;
@@ -292,7 +300,8 @@
             right: 0;
             background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
             padding: 30px;
-            color: white;        }
+            color: white;
+        }
 
         .category-content {
             padding: 25px;
@@ -333,7 +342,6 @@
             padding: 80px 20px;
             margin-top: 60px;
         }
-
         .features-grid {
             max-width: 1200px;
             margin: 0 auto;
@@ -341,6 +349,7 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
         }
+
         .feature-item {
             text-align: center;
             padding: 30px;
@@ -382,15 +391,39 @@
             padding-bottom: 40px;
             border-bottom: 1px solid #374151;
         }
-
         .footer-logo {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;        }
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo-icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        .footer-logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .footer-new {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: white;
+            letter-spacing: -1px;
+        }
+
+        .footer-trendhive {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #9ca3af;
+            letter-spacing: -0.5px;
+            margin-top: -5px;
+        }
 
         .footer-text {
             color: #9ca3af;
@@ -406,8 +439,7 @@
 
         .footer-section h3 {
             font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: white;
+            margin-bottom: 20px;            color: white;
         }
 
         .footer-section ul {
@@ -439,7 +471,9 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .header-wrapper { justify-content: center; }            .brand-name { font-size: 1.6rem; }
+            .header-wrapper { justify-content: center; }
+            .brand-new { font-size: 1.6rem; }
+            .brand-trendhive { font-size: 1.1rem; }
             .hero h1 { font-size: 2.2rem; }
             .hero-subtitle { font-size: 1.2rem; }
             .section-title { font-size: 2rem; }
@@ -447,17 +481,33 @@
             .category-image-wrapper { height: 220px; }
             .mobile-nav-content { width: 100%; }
             .header-actions { position: fixed; right: 20px; top: 20px; }
+            .footer-new { font-size: 2rem; }
+            .footer-trendhive { font-size: 1.2rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header - Clean & Simple -->
-    <header>
+    <!-- Header -->    <header>
         <div class="header-wrapper">
             <a href="https://newtrendhive.com/" class="brand">
-                <div class="brand-logo">🌟</div>
-                <div class="brand-name">NewTrendhive</div>
+                <!-- SVG Logo -->
+                <svg class="brand-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="45" fill="url(#logoGradient)"/>
+                    <path d="M30 65 L55 35 L60 45 L75 30" stroke="white" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <polyline points="65,30 75,30 75,40" fill="white" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="brand-text">
+                    <span class="brand-new">NEW</span>
+                    <span class="brand-trendhive">Trendhive</span>
+                </div>
             </a>
             <div class="header-actions">
                 <div class="cart-wrapper">
@@ -487,8 +537,8 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero">        <div class="hero-content">
+    <!-- Hero Section -->    <section class="hero">
+        <div class="hero-content">
             <h1>Elevate Your Lifestyle</h1>
             <p class="hero-subtitle">Premium Health & Wellness Products</p>
             <p class="hero-description">
@@ -509,7 +559,7 @@
             <!-- Health & Beauty -->
             <div class="category-card" onclick="window.location.href='https://newtrendhive.com/collections/health-beauty'">
                 <div class="category-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1570172619644-dfd102871d7c?w=600&h=400&fit=crop" alt="Health & Beauty" class="category-image">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd102871d7c?w=800&h=600&fit=crop" alt="Health & Beauty" class="category-image">
                     <div class="category-overlay">
                         <h3 style="font-size: 1.5rem; font-weight: 700;">HEALTH & BEAUTY</h3>
                     </div>
@@ -524,7 +574,7 @@
             <!-- Sports & Outdoors -->
             <div class="category-card" onclick="window.location.href='https://newtrendhive.com/collections/sports-outdoors'">
                 <div class="category-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop" alt="Sports & Outdoors" class="category-image">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop" alt="Sports & Outdoors" class="category-image">
                     <div class="category-overlay">
                         <h3 style="font-size: 1.5rem; font-weight: 700;">SPORTS & OUTDOORS</h3>
                     </div>
@@ -536,9 +586,9 @@
                 </div>
             </div>
 
-            <!-- Electronics -->
-            <div class="category-card" onclick="window.location.href='https://newtrendhive.com/collections/electronics'">                <div class="category-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1498049794561-778c5c012619?w=600&h=400&fit=crop" alt="Electronics" class="category-image">
+            <!-- Electronics -->            <div class="category-card" onclick="window.location.href='https://newtrendhive.com/collections/electronics'">
+                <div class="category-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1498049794561-778c5c012619?w=800&h=600&fit=crop" alt="Electronics" class="category-image">
                     <div class="category-overlay">
                         <h3 style="font-size: 1.5rem; font-weight: 700;">ELECTRONICS</h3>
                     </div>
@@ -571,7 +621,7 @@
                 <p class="feature-text">Premium products only</p>
             </div>
             <div class="feature-item">
-                <div class="feature-icon">💬</div>
+                <div class="feature-icon"></div>
                 <h3 class="feature-title">24/7 Support</h3>
                 <p class="feature-text">Always here to help</p>
             </div>
@@ -583,10 +633,25 @@
         <div class="footer-content">
             <div class="footer-top">
                 <div class="footer-logo">
-                    <span style="font-size: 2.5rem;">🌟</span>
-                    NewTrendhive
+                    <!-- SVG Logo -->
+                    <svg class="footer-logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>                            <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="45" fill="url(#footerLogoGradient)"/>
+                        <path d="M30 65 L55 35 L60 45 L75 30" stroke="white" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <polyline points="65,30 75,30 75,40" fill="white" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="footer-logo-text">
+                        <span class="footer-new">NEW</span>
+                        <span class="footer-trendhive">Trendhive</span>
+                    </div>
                 </div>
-                <p class="footer-text">Your trusted destination for health, wellness, and tech products.</p>            </div>
+                <p class="footer-text">Your trusted destination for health, wellness, and tech products.</p>
+            </div>
             
             <div class="footer-grid">
                 <div class="footer-section">
@@ -619,8 +684,7 @@
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>© 2026 NewTrendhive. All rights reserved.</p>
+            <div class="footer-bottom">                <p>© 2026 NewTrendhive. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -635,7 +699,8 @@
         function closeMenu(event) {
             document.getElementById('mobileNav').classList.remove('active');
             document.body.style.overflow = 'auto';
-        }    </script>
+        }
+    </script>
 
 </body>
 </html>
